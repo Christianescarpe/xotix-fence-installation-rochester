@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-orange: #ff5500;
+    --brand-dark: #0d0f12;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    @apply bg-[#0d0f12] text-[#d1d5db] antialiased selection:bg-[#ff5500] selection:text-white;
+  }
+}
+
+/* Custom rich article styling for spreadsheet content in dark theme */
+.rich-content h1 {
+  @apply text-3xl sm:text-4xl md:text-5xl font-black uppercase text-white mt-8 mb-4 tracking-tight leading-tight;
+}
+
+.rich-content h2 {
+  @apply text-2xl sm:text-3xl font-black uppercase text-white mt-10 mb-4 pb-2 border-l-4 border-[#ff5500] pl-3 leading-snug;
+}
+
+.rich-content h3 {
+  @apply text-xl sm:text-2xl font-bold uppercase text-white mt-6 mb-3;
+}
+
+.rich-content p {
+  @apply text-sm sm:text-base text-gray-300 leading-relaxed mb-5;
+}
+
+/* Single blog post paragraph styling */
+.single-blog-page p,
+.blog-article-content p {
+  color: #ffffff !important;
+}
+
+.single-blog-page li,
+.blog-article-content li {
+  color: #ffffff !important;
+}
+
+.rich-content strong {
+  @apply font-bold text-white;
+}
+
+.rich-content ol {
+  @apply list-decimal pl-6 space-y-3 mb-6 text-gray-300 text-sm sm:text-base;
+}
+
+.rich-content ul {
+  @apply list-disc pl-6 space-y-3 mb-6 text-gray-300 text-sm sm:text-base;
+}
+
+.rich-content li {
+  @apply leading-relaxed pl-1;
+}
+
+.rich-content a {
+  @apply text-[#ff5500] font-bold underline underline-offset-4 decoration-[#ff5500]/50 hover:text-white hover:decoration-white transition-colors;
+}
+
+/* Button styles */
+.btn-orange {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#ff5500] hover:bg-[#e64900] text-white font-black text-xs uppercase tracking-widest transition-all duration-200 active:scale-95 shadow-lg shadow-orange-950/40;
+}
+
+.btn-outline-dark {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#2b313e] hover:border-[#ff5500] text-white font-black text-xs uppercase tracking-widest transition-all duration-200 active:scale-95;
+}
+
+/* Section Subtitle Tag */
+.section-tag {
+  @apply text-[11px] font-black uppercase tracking-widest text-[#ff5500] mb-2 block;
+}
+
+.section-heading {
+  @apply text-2xl sm:text-4xl md:text-5xl font-black uppercase text-white tracking-tight;
+}
