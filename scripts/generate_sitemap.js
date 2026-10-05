@@ -4,7 +4,7 @@ const { pagesData } = require('../src/data/pagesData.ts');
 const { blogsData } = require('../src/data/blogsData.ts');
 
 const baseUrl = 'https://fenceinstallationrochesterny.site';
-const now = new Date().toISOString();
+const now = new Date().toISOString().split('T')[0];
 
 const urls = [
   { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'weekly' },
