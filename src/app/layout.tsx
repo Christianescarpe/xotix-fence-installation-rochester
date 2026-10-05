@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { siteConfig } from '@/data/siteConfig';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://xotix-fence-installation-rochester.vercel.app'),
   title: 'Fence Installation Rochester NY | Xotix Fence',
   description: 'Professional fence installation in Rochester, NY. Wood, vinyl, chain link, aluminum, privacy and custom fencing throughout Rochester and Monroe County.',
   keywords: [
@@ -16,10 +17,20 @@ export const metadata: Metadata = {
     'Monroe County Fencing Contractor'
   ],
   authors: [{ name: siteConfig.name }],
+  verification: {
+    google: 'QjeggimgvQSA6DIo9pJCVs_BR6S3ZT64yEJBV7BzXqs',
+  },
   robots: {
     index: true,
     follow: true,
-  }
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
