@@ -39,5 +39,20 @@ for (const u of urls) {
 xml += `</urlset>\n`;
 
 const publicPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const rootPath = path.join(__dirname, '..', 'sitemap.xml');
 fs.writeFileSync(publicPath, xml, 'utf8');
-console.log(`Successfully wrote ${urls.length} URLs to ${publicPath}`);
+fs.writeFileSync(rootPath, xml, 'utf8');
+console.log(`Successfully wrote ${urls.length} URLs to ${publicPath} and ${rootPath}`);
+
+const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: https://fenceinstallationrochesterny.site/sitemap.xml
+`;
+
+const publicRobots = path.join(__dirname, '..', 'public', 'robots.txt');
+const rootRobots = path.join(__dirname, '..', 'robots.txt');
+fs.writeFileSync(publicRobots, robotsTxt, 'utf8');
+fs.writeFileSync(rootRobots, robotsTxt, 'utf8');
+console.log(`Successfully wrote robots.txt to ${publicRobots} and ${rootRobots}`);
+
