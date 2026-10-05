@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   description: 'Expert advice, cost guides, winter fence tips, and permit information for homeowners and businesses in Rochester, NY.',
   alternates: {
-    canonical: 'https://xotix-fence-installation-rochester.vercel.app/blog/',
+    canonical: 'https://fenceinstallationrochesterny.site/blog/',
   },
   openGraph: {
     title: 'Blogs | Xotix Fence Installation Rochester',
     description: 'Expert advice, cost guides, winter fence tips, and permit information for homeowners and businesses in Rochester, NY.',
-    url: 'https://xotix-fence-installation-rochester.vercel.app/blog/',
+    url: 'https://fenceinstallationrochesterny.site/blog/',
     siteName: 'Xotix Fence Installation Rochester',
     locale: 'en_US',
     type: 'website',

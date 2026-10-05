@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   },
   description: 'Contact Xotix Fence Installation Rochester. Call (585) 481-8674 or visit us at 264 Hudson Ave, Rochester, NY 14605 to schedule your fence estimate.',
   alternates: {
-    canonical: 'https://xotix-fence-installation-rochester.vercel.app/contact/',
+    canonical: 'https://fenceinstallationrochesterny.site/contact/',
   },
   openGraph: {
     title: 'Contact | Xotix Fence Installation Rochester',
     description: 'Contact Xotix Fence Installation Rochester. Call (585) 481-8674 or visit us at 264 Hudson Ave, Rochester, NY 14605 to schedule your fence estimate.',
-    url: 'https://xotix-fence-installation-rochester.vercel.app/contact/',
+    url: 'https://fenceinstallationrochesterny.site/contact/',
     siteName: 'Xotix Fence Installation Rochester',
     locale: 'en_US',
     type: 'website',

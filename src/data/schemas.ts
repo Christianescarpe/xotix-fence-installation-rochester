@@ -2,7 +2,7 @@ import { siteConfig } from './siteConfig';
 import { PageData } from './pagesData';
 import { BlogData } from './blogsData';
 
-const BASE_URL = 'https://xotix-fence-installation-rochester.vercel.app';
+const BASE_URL = 'https://fenceinstallationrochesterny.site';
 const LOGO_URL = `${BASE_URL}/images/optimized/white-vinyl-fence-surrounding-green-suburban-yard-2026-09-22-23-38-13-utc.webp`;
 
 export function getLocalBusinessSchema() {

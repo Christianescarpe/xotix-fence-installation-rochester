@@ -33,7 +33,7 @@ export function generateMetadata({ params }: BlogPostProps): Metadata {
   const blog = blogsData.find((b) => b.cleanSlug === params.slug);
   if (!blog) return {};
 
-  const canonicalUrl = `https://xotix-fence-installation-rochester.vercel.app/blog/${blog.cleanSlug}/`;
+  const canonicalUrl = `https://fenceinstallationrochesterny.site/blog/${blog.cleanSlug}/`;
 
   return {
     title: {

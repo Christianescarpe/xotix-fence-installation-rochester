@@ -36,7 +36,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const page = pagesData.find((p) => p.cleanSlug === params.slug);
   if (!page) return {};
 
-  const canonicalUrl = `https://xotix-fence-installation-rochester.vercel.app/${page.cleanSlug}/`;
+  const canonicalUrl = `https://fenceinstallationrochesterny.site/${page.cleanSlug}/`;
 
   return {
     title: {

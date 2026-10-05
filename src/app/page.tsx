@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   description: homePage.metaDescription,
   alternates: {
-    canonical: 'https://xotix-fence-installation-rochester.vercel.app/',
+    canonical: 'https://fenceinstallationrochesterny.site/',
   },
   openGraph: {
     title: homePage.seoTitle,
     description: homePage.metaDescription,
-    url: 'https://xotix-fence-installation-rochester.vercel.app/',
+    url: 'https://fenceinstallationrochesterny.site/',
     siteName: 'Xotix Fence Installation Rochester',
     locale: 'en_US',
     type: 'website',

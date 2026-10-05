@@ -8,7 +8,7 @@ import JsonLd from '@/components/JsonLd';
 import { getLocalBusinessSchema } from '@/data/schemas';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://xotix-fence-installation-rochester.vercel.app'),
+  metadataBase: new URL('https://fenceinstallationrochesterny.site'),
   title: 'Fence Installation Rochester NY | Xotix Fence',
   description: 'Professional fence installation in Rochester, NY. Wood, vinyl, chain link, aluminum, privacy and custom fencing throughout Rochester and Monroe County.',
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fence Installation Rochester NY | Xotix Fence',
     description: 'Professional fence installation in Rochester, NY. Wood, vinyl, chain link, aluminum, privacy and custom fencing throughout Rochester and Monroe County.',
-    url: 'https://xotix-fence-installation-rochester.vercel.app',
+    url: 'https://fenceinstallationrochesterny.site',
     siteName: 'Xotix Fence Installation Rochester',
     locale: 'en_US',
     type: 'website',

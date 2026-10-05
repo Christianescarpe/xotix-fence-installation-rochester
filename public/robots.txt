@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+
+User-Agent: Googlebot
+Allow: /
+
+Sitemap: https://fenceinstallationrochesterny.site/sitemap.xml
