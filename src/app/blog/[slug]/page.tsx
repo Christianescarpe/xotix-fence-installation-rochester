@@ -14,6 +14,9 @@ import FaqCards from '@/components/FaqCards';
 import CallToAction from '@/components/CallToAction';
 import ContentRenderer from '@/components/ContentRenderer';
 
+import JsonLd from '@/components/JsonLd';
+import { getBlogPostingSchema } from '@/data/schemas';
+
 interface BlogPostProps {
   params: {
     slug: string;
@@ -30,11 +33,35 @@ export function generateMetadata({ params }: BlogPostProps): Metadata {
   const blog = blogsData.find((b) => b.cleanSlug === params.slug);
   if (!blog) return {};
 
+  const canonicalUrl = `https://xotix-fence-installation-rochester.vercel.app/blog/${blog.cleanSlug}/`;
+
   return {
     title: {
       absolute: blog.seoTitle,
     },
     description: blog.metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: blog.seoTitle,
+      description: blog.metaDescription,
+      url: canonicalUrl,
+      siteName: 'Xotix Fence Installation Rochester',
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: '2026-10-01T00:00:00.000Z',
+      images: blog.image
+        ? [
+            {
+              url: blog.image,
+              width: 1200,
+              height: 630,
+              alt: blog.blogTitle,
+            },
+          ]
+        : undefined,
+    },
   };
 }
 
@@ -49,6 +76,7 @@ export default function BlogPostPage({ params }: BlogPostProps) {
 
   return (
     <div className="single-blog-page bg-[#0d0f12] text-white">
+      <JsonLd data={getBlogPostingSchema(blog)} />
       {/* 1. Hero matching homepage */}
       <Hero
         title={blog.blogTitle}

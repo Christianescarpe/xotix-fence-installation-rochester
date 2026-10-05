@@ -65,7 +65,7 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-1.5 text-xs text-gray-400">
-              {servicePages.slice(0, 7).map((s) => (
+              {servicePages.map((s) => (
                 <li key={s.urlSlug}>
                   <Link 
                     href={s.urlSlug} 
@@ -84,7 +84,7 @@ export default function Footer() {
               Monroe County
             </h4>
             <ul className="space-y-1.5 text-xs text-gray-400">
-              {locationPages.slice(0, 7).map((l) => (
+              {locationPages.map((l) => (
                 <li key={l.urlSlug}>
                   <Link 
                     href={l.urlSlug} 

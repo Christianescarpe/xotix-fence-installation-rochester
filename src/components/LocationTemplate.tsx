@@ -7,6 +7,8 @@ import ProjectProcess from './ProjectProcess';
 import FaqCards from './FaqCards';
 import CallToAction from './CallToAction';
 import ContentRenderer from './ContentRenderer';
+import JsonLd from './JsonLd';
+import { getLocationSchema } from '@/data/schemas';
 import { PageData } from '@/data/pagesData';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -111,6 +113,7 @@ export default function LocationTemplate({ page }: LocationTemplateProps) {
 
   return (
     <div>
+      <JsonLd data={getLocationSchema(page)} />
       {/* 1. Hero Section matching homepage design */}
       <Hero
         title={page.pageTitle}

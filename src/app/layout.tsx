@@ -4,6 +4,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { siteConfig } from '@/data/siteConfig';
 
+import JsonLd from '@/components/JsonLd';
+import { getLocalBusinessSchema } from '@/data/schemas';
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://xotix-fence-installation-rochester.vercel.app'),
   title: 'Fence Installation Rochester NY | Xotix Fence',
@@ -31,6 +34,28 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  openGraph: {
+    title: 'Fence Installation Rochester NY | Xotix Fence',
+    description: 'Professional fence installation in Rochester, NY. Wood, vinyl, chain link, aluminum, privacy and custom fencing throughout Rochester and Monroe County.',
+    url: 'https://xotix-fence-installation-rochester.vercel.app',
+    siteName: 'Xotix Fence Installation Rochester',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/images/optimized/white-vinyl-fence-surrounding-green-suburban-yard-2026-09-22-23-38-13-utc.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Xotix Fence Installation Rochester',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fence Installation Rochester NY | Xotix Fence',
+    description: 'Professional fence installation in Rochester, NY. Wood, vinyl, chain link, aluminum, privacy and custom fencing throughout Rochester and Monroe County.',
+    images: ['/images/optimized/white-vinyl-fence-surrounding-green-suburban-yard-2026-09-22-23-38-13-utc.webp'],
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +65,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <JsonLd data={getLocalBusinessSchema()} />
+      </head>
       <body className="min-h-screen flex flex-col bg-[#fafbfc] text-[#141a13] antialiased">
         <Navbar />
         <main className="flex-1">

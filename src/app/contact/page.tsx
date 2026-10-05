@@ -7,22 +7,37 @@ import ServingAreaSection from '@/components/ServingAreaSection';
 import CallToAction from '@/components/CallToAction';
 import { siteConfig } from '@/data/siteConfig';
 
+import JsonLd from '@/components/JsonLd';
+import { getContactPageSchema } from '@/data/schemas';
+
 export const metadata: Metadata = {
   title: {
     absolute: 'Contact | Xotix Fence Installation Rochester',
   },
   description: 'Contact Xotix Fence Installation Rochester. Call (585) 481-8674 or visit us at 264 Hudson Ave, Rochester, NY 14605 to schedule your fence estimate.',
+  alternates: {
+    canonical: 'https://xotix-fence-installation-rochester.vercel.app/contact/',
+  },
+  openGraph: {
+    title: 'Contact | Xotix Fence Installation Rochester',
+    description: 'Contact Xotix Fence Installation Rochester. Call (585) 481-8674 or visit us at 264 Hudson Ave, Rochester, NY 14605 to schedule your fence estimate.',
+    url: 'https://xotix-fence-installation-rochester.vercel.app/contact/',
+    siteName: 'Xotix Fence Installation Rochester',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {
   return (
     <div className="bg-[#0d0f12] text-white">
+      <JsonLd data={getContactPageSchema()} />
       {/* 1. Hero Section matching homepage design */}
       <Hero
         title="Contact Xotix Fence Installation Rochester"
         subtitle="Ready to get started? Contact Xotix Fence Installation Rochester at (585) 481-8674 or visit us at 264 Hudson Ave, Rochester, NY 14605, United States to talk through your project."
         badge="// GET IN TOUCH"
-        image="/images/optimized/craftsman-installing-wooden-fence-panels-outdoors-2026-09-24-11-21-41-utc.webp"
+        image="/images/optimized/craftsman-uses-nail-gun-to-build-fence-2026-09-24-11-17-47-utc.webp"
       />
 
       {/* 2. Serving Rochester & Monroe County Banner */}

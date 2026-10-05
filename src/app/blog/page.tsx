@@ -16,6 +16,17 @@ export const metadata: Metadata = {
     absolute: 'Blogs',
   },
   description: 'Expert advice, cost guides, winter fence tips, and permit information for homeowners and businesses in Rochester, NY.',
+  alternates: {
+    canonical: 'https://xotix-fence-installation-rochester.vercel.app/blog/',
+  },
+  openGraph: {
+    title: 'Blogs | Xotix Fence Installation Rochester',
+    description: 'Expert advice, cost guides, winter fence tips, and permit information for homeowners and businesses in Rochester, NY.',
+    url: 'https://xotix-fence-installation-rochester.vercel.app/blog/',
+    siteName: 'Xotix Fence Installation Rochester',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function BlogIndexPage() {

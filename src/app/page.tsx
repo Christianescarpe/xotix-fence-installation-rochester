@@ -16,6 +16,25 @@ export const metadata: Metadata = {
     absolute: homePage.seoTitle,
   },
   description: homePage.metaDescription,
+  alternates: {
+    canonical: 'https://xotix-fence-installation-rochester.vercel.app/',
+  },
+  openGraph: {
+    title: homePage.seoTitle,
+    description: homePage.metaDescription,
+    url: 'https://xotix-fence-installation-rochester.vercel.app/',
+    siteName: 'Xotix Fence Installation Rochester',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/images/optimized/white-vinyl-fence-surrounding-green-suburban-yard-2026-09-22-23-38-13-utc.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Xotix Fence Installation Rochester',
+      },
+    ],
+  },
 };
 
 export default function HomePage() {

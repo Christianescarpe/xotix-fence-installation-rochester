@@ -29,15 +29,41 @@ export function generateStaticParams() {
     }));
 }
 
+import JsonLd from '@/components/JsonLd';
+import { getServiceSchema } from '@/data/schemas';
+
 export function generateMetadata({ params }: PageProps): Metadata {
   const page = pagesData.find((p) => p.cleanSlug === params.slug);
   if (!page) return {};
+
+  const canonicalUrl = `https://xotix-fence-installation-rochester.vercel.app/${page.cleanSlug}/`;
 
   return {
     title: {
       absolute: page.seoTitle,
     },
     description: page.metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: page.seoTitle,
+      description: page.metaDescription,
+      url: canonicalUrl,
+      siteName: 'Xotix Fence Installation Rochester',
+      locale: 'en_US',
+      type: 'website',
+      images: page.image
+        ? [
+            {
+              url: page.image,
+              width: 1200,
+              height: 630,
+              alt: page.pageTitle,
+            },
+          ]
+        : undefined,
+    },
   };
 }
 
@@ -90,6 +116,7 @@ export default function GenericPage({ params }: PageProps) {
 
   return (
     <div>
+      <JsonLd data={getServiceSchema(page)} />
       {/* 1. Hero Section matching homepage design */}
       <Hero
         title={page.pageTitle}
